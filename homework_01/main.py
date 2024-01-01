@@ -2,20 +2,21 @@
 Домашнее задание №1
 Функции и структуры данных
 """
-a = (1, 2, 5, 7)
+# a = (1, 2, 5, 7)
 
 
-def power_numbers(sp):
-    a = map(lambda num_sq: num_sq**2, sp)
-    return a
+def power_numbers(*sp):
+    # for a in s:
+        a = map(lambda num_sq: num_sq**2, sp)
+        return list(a)
     # print(a)
-    """
-    функция, которая принимает N целых чисел,
-    и возвращает список квадратов этих чисел
-    >>> power_numbers(1, 2, 5, 7)
-    <<< [1, 4, 25, 49]
-    """
-# print(power_numbers(a))
+    # """
+    # функция, которая принимает N целых чисел,
+    # и возвращает список квадратов этих чисел
+    # >>> power_numbers(1, 2, 5, 7)
+    # <<< [1, 4, 25, 49]
+    # """
+print(power_numbers(1, 2, 5, 7))
 
 
 # filter types
