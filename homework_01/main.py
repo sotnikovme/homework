@@ -24,20 +24,20 @@ ODD = "odd"
 EVEN = "even"
 PRIME = "prime"
 
-def f_odd(num_1):
-    # print(num_1)
-    f = filter(lambda q: q % 2 == 0, num_1)
+# def f_odd(num_1):
+#     # print(num_1)
+#     f = filter(lambda q: q % 2 == 0, num_1)
 
-    return list(f)
-
-
-
-def f_even(num_2):
-    f = filter(lambda q: q % 2 == 1, num_2)
-    return list(f)
+#     return list(f)
 
 
-def f_prime(num_3):
+
+# def f_even(num_2):
+#     # f = filter(lambda q: q % 2 == 1, num_2)
+#     return list(f)
+
+
+def is_prime(num_3):
     m = []
     
     for number in num_3:
@@ -58,15 +58,18 @@ def f_prime(num_3):
 
 def filter_numbers(x, y):
     if y == ODD:
-        return f_odd(x)
+          return list(filter(lambda q: q % 2 == 1, x))
+        # return f_odd(x)
     if y ==EVEN:
-        return f_even(x)
+          return list(filter(lambda q: q % 2 == 0, x))
+        # return f_even(x)
     if y==PRIME:
-        return f_prime(x)
+        return is_prime(x)
 
 # print(filter_numbers([2, 3, 4, 5, 9, 7, 11, 6], ODD))
 # print(filter_numbers([2, 3, 4, 5, 9, 7, 11, 6], EVEN))
-print(filter_numbers([2, 3, 4, 5, 9, 7, 11, 6], PRIME))
+# print(filter_numbers([2, 3, 4, 5, 9, 7, 11, 6], PRIME))
+print(filter_numbers([2, 1, 3, 5, 4], EVEN))
 
 
     # """
