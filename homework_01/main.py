@@ -16,7 +16,7 @@ def power_numbers(*sp):
     # >>> power_numbers(1, 2, 5, 7)
     # <<< [1, 4, 25, 49]
     # """
-print(power_numbers(1, 2, 5, 7))
+# print(power_numbers(1, 2, 5, 7))
 
 
 # filter types
@@ -25,14 +25,16 @@ EVEN = "even"
 PRIME = "prime"
 
 def f_odd(num_1):
+    # print(num_1)
     f = filter(lambda q: q % 2 == 0, num_1)
-    return(list(f))
+
+    return list(f)
 
 
 
 def f_even(num_2):
     f = filter(lambda q: q % 2 == 1, num_2)
-    return(list(f))
+    return list(f)
 
 
 def f_prime(num_3):
@@ -49,22 +51,22 @@ def f_prime(num_3):
               
             if simple == True:
                     m.append(number)
-    return m
+    return list(m)
 
             
 
 
 def filter_numbers(x, y):
     if y == ODD:
-        f_odd(x)
+        return f_odd(x)
     if y ==EVEN:
-        f_even(x)
+        return f_even(x)
     if y==PRIME:
-        f_prime(x)
+        return f_prime(x)
 
 # print(filter_numbers([2, 3, 4, 5, 9, 7, 11, 6], ODD))
 # print(filter_numbers([2, 3, 4, 5, 9, 7, 11, 6], EVEN))
-# print(filter_numbers([2, 3, 4, 5, 9, 7, 11, 6], PRIME))
+print(filter_numbers([2, 3, 4, 5, 9, 7, 11, 6], PRIME))
 
 
     # """
