@@ -69,7 +69,7 @@ def filter_numbers(x, y):
 # print(filter_numbers([2, 3, 4, 5, 9, 7, 11, 6], ODD))
 # print(filter_numbers([2, 3, 4, 5, 9, 7, 11, 6], EVEN))
 # print(filter_numbers([2, 3, 4, 5, 9, 7, 11, 6], PRIME))
-print(filter_numbers([2, 1, 3, 5, 4], EVEN))
+# print(filter_numbers([2, 1, 3, 5, 4], EVEN))
 
 
     # """
