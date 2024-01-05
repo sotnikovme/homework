@@ -5,9 +5,12 @@ from homework_02.exceptions import NotEnoughFuel, LowFuelError
 
 # @abstractmethod
 class Vehicle(ABC):
-    def __init__(self, weight=1000, started=True, fuel=30, fuel_consumption=5):
+    weight=1000
+    started=False
+    fuel=30
+    fuel_consumption=5
+    def __init__(self, weight=1000, fuel=30, fuel_consumption=5):
         self.weight=weight
-        self.started=started
         self.fuel=fuel
         self.fuel_consumption=fuel_consumption
 
