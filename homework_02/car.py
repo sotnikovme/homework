@@ -1,9 +1,9 @@
-from engine import Engine
-from base import Vehicle
+from homework_02.engine import Engine
+from homework_02.base import Vehicle
 
 
 class Car(Vehicle):
     type = Engine
     def set_engine(self):
-        Engine.volume
-        Engine.pistons
+        self.volume
+        self.pistons
