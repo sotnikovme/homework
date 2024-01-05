@@ -3,7 +3,9 @@ from homework_02.base import Vehicle
 
 
 class Car(Vehicle):
-    type = Engine
-    def set_engine(self):
-        self.volume
-        self.pistons
+    engine: Engine
+    # type = Engine
+    def set_engine(self, a:Engine):
+        self.engine = a
+        # self.volume
+        # self.pistons
