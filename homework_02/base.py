@@ -1,37 +1,39 @@
 from abc import ABC, abstractmethod
-import exceptions
+from exceptions import NotEnoughFuel, LowFuelError
 
+# @abstractmethod
 class Vehicle(ABC):
-    def __init__(self, weight, started, fuel, fuel_consumption):
+    def __init__(self, weight=1000, started=True, fuel=30, fuel_consumption=5):
         self.weight=weight
         self.started=started
         self.fuel=fuel
         self.fuel_consumption=fuel_consumption
-    # weight=weightA()
-    # started=startedA()
-    # fuel=fuelA()
-    # fuel_consumption=fuel_consumptionA()
 
-    @abstractmethod
+
+    # @abstractmethod
     # def __init__(self, weight, fuel, fuel_consumption):
     #     self.weight=weight
     #     self.fuel=fuel
     #     self.fuel_consumption=fuel_consumption
 
-    def move(self, fuel):
-        if Vehicle.fuel > 8:
-            remaining_fuel=Vehicle.fuel - Vehicle.fuel_consumption     
-            print(remaining_fuel)  
+    def move(self, size):
+        result = self.fuel - size * self.fuel_consumption
+        if result < 0:
+               exceptions.NotEnoughFuel
+               print("Error") 
         else:
-            try:
-                Vehicle.fuel > 8
-            except exceptions.NotEnoughFuel:
-                print("Error")
+            self.fuel=result
+            return self.fuel
+             
+
 
 
     def start(self, started):
-        if Vehicle.started > 1:
-            Vehicle.move()
-        else: 
-            exceptions.LowFuelError
-            print('Error')
+        if self.started == False:
+            if self.fuel > 0:
+                self.started = True
+
+            else: 
+                exceptions.LowFuelError
+                print('Error')
+        return self
