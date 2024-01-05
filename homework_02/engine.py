@@ -4,6 +4,6 @@ from dataclasses import dataclass
 class Engine:
     volume = 2
     pistons = 6
-    def __init__(self, volume, pistons):
+    def __init__(self, volume = 2, pistons = 6):
         self.volume = volume
-        self.pistons = pistons 
+        self.pistons = pistons  
