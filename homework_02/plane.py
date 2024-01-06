@@ -1,11 +1,12 @@
-# from homework_02.base import Vehicle
-from exceptions import CargoOverload
-from base import Vehicle
+from homework_02.base import Vehicle
+from homework_02.exceptions import CargoOverload
+# from exceptions import CargoOverload
+# from base import Vehicle
 
 class Plane(Vehicle):
-    def __init__(self, cargo, max_cargo, weight, started, fuel, fuel_consumption):
-        super().__init__(weight, started, fuel, fuel_consumption)
-        self.cargo = cargo
+    def __init__(self, weight, fuel, fuel_consumption, max_cargo):
+        super().__init__(weight, fuel, fuel_consumption)
+        self.cargo = 0
         self.max_cargo = max_cargo
 
     def load_cargo(self, dop_cargo):
@@ -20,5 +21,3 @@ class Plane(Vehicle):
         new_cargo = self.cargo
         self.cargo = 0
         return new_cargo
-    # yield Plane.cargo
-# Plane.cargo = 0
