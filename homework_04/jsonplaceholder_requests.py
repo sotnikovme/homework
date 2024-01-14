@@ -3,6 +3,7 @@
 """
 import asyncio
 import logging
+import aiohttp
 from aiohttp import ClientSession
 from homework_04.common import configure_logging
 
@@ -12,7 +13,7 @@ USERS_DATA_URL = "https://jsonplaceholder.typicode.com/"
 POSTS_DATA_URL = "https://github.com/typicode/xv.git"
 
 async def fetch_json(url: str):
-    async with ClientSession() as session:
+    async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
             data: dict = await response.json()
             return data
