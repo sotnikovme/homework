@@ -12,14 +12,22 @@
   (используйте полученные из запроса данные, передайте их в функцию для добавления в БД)
 - закрытие соединения с БД
 """
+import asyncio
+from homework_04.models import create_tables, fill_users_table, fill_posts_table
+from homework_04.jsonplaceholder_requests import fetch_users, fetch_posts
 
 
 async def async_main():
-    pass
-
+    await create_tables()
+    users_data, posts_data = await asyncio.gather(
+        asyncio.create_task(fetch_users()),
+        asyncio.create_task(fetch_posts()),
+    )
+    await fill_users_table(users_data)
+    await fill_posts_table(posts_data)
 
 def main():
-    pass
+    asyncio.run(async_main())
 
 
 if __name__ == "__main__":
