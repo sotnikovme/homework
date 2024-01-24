@@ -63,11 +63,3 @@ async def fetch_posts():
             return posts_data
 
 
-# async def main():
-#     configure_logging()
-#     result = await fetch_json(USERS_DATA_URL)
-#     result = await fetch_json(POSTS_DATA_URL)
-#     log.info("got result %s", result)
-
-#if  __name__ == "__main__":
-#    asyncio.run(main())
