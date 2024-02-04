@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  app: &app-config
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    environment:
+      SQLALCHEMY_DATABASE_URI: "postgresql+psycopg2://postgres:password@pg:5432/postgres"
+      CONFIG_NAME: Prod
+    ports:
+      - "8080:8080"
+  pg:
+    image: postgres
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+
